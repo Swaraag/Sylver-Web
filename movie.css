@@ -1,0 +1,215 @@
+        
+        .login{
+            font-weight: 300;font-size: 17px;
+        }
+        
+        *{
+            padding: 0;
+            margin: 10px;
+            box-sizing: border-box;   
+            
+            
+         }
+        body{
+            
+           background-color:black;   
+           font-size: 18px;
+         }
+         .side-button{   
+            font-family: 'Open Sans', sans-serif;
+            list-style-type: none;
+            text-decoration: none;
+            font-weight: normal;
+         }
+        .title{
+            color: orange;
+            display:inline-block; 
+            margin-right:70%;
+        }
+           table
+           {
+            width:577px;
+            margin-right:0px;
+           }
+         a {
+             color: black;
+             text-decoration: none;
+         }
+         .login{
+             color: orange;
+              font-family: 'Open Sans', sans-serif;
+                list-style-type: none;
+                text-decoration: none;
+                font-weight: none;
+         }
+
+         .signup{
+             color: orange;
+             
+             width: 80px;
+             
+             text-align: center;
+            
+
+         }
+
+
+         .templete{
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            font-size: 27px;
+            line-height: 1.35em;
+            padding-bottom: 40px;
+            padding-top: 30px;
+            padding-left: 30px;
+            margin: auto;
+            color: #072537;
+            width:100%;
+            padding-right: 0;
+            
+        }
+        nav{
+            position:absolute;
+            right: 100px;
+            top: 30px;
+            margin: 0;
+        }
+         .button1{
+             background-color: white;
+             color: black;
+             padding: 15px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-family: 'Nanum Gothic Coding', monospace;
+             font-size: 20px;
+             border: 1px solid #128121; 
+         }
+     
+    .down{position: absolute;
+    top: 400px;
+    height: 80px;
+
+}
+  
+    @media only screen and (max-width:1250px){
+        .templete{
+            width: 80%;
+
+        }
+        .content-area{
+            width:100%;
+            margin:auto;
+        }
+            .img{
+                position: absolute;
+                width:40%;
+                margin:auto;
+            }
+            nav{
+                right: -150px;
+            }
+    }
+     @media only screen and (max-width: 1160px){
+        .img{
+            width: 30%;
+
+         
+        
+    }
+    
+}
+    @media only screen and (max-width: 1023px){
+        
+          .header{
+            margin: auto; 
+         }
+         .content-area{
+            width: 80%;
+            margin: auto;
+        }
+        .subcontent2{
+            position: relative;
+            margin-left: 0%;
+            margin-top: -35%;
+            font-size: 28px;
+        }
+        .jk{width: 800px;}
+       
+        .img{
+            
+            height: max-content;
+           position: absolute;
+           display: none;
+
+        }
+        nav{
+            right:-200px;
+         }
+         .subcontent1{
+             font-size: 28px;
+         }
+    }
+    @media only screen and (max-width: 700px){
+        .img{
+            display: none;
+        }
+        .content-area{
+            width: 100%;
+        }
+        .aj{
+            font-size: 50%;
+        }
+        .subcontent2{
+            position: absolute;
+            margin-top: 200px;
+            font-size: 28px;
+        }
+        *{
+            width: 100%;
+        }
+        .templete{
+            width: 100%;
+        }
+
+        .login{
+            color: orange;
+            
+            position: absolute;
+            padding: 10px;
+            top: 50px;
+            left: -190px;
+         }
+    
+    .signup{
+        
+        color: orange;
+        position: absolute;
+        top: 45px;
+    
+        
+    margin-left: -60px;
+    }
+    @media only screen and (max-width:700px){
+.header{display: inline;
+}
+.login{
+    color: orange;
+    position: absolute;
+    padding: 20px;
+    top: 30px;
+    left: -190px;
+}
+    .sigup{
+    
+    margin-left: 20px;
+    }
+    }
+@media only screen and (max-width:340px){
+    .firstLine{
+        width: 100%;
+        font-size: 30px;
+    }
+}
+    }
