@@ -79,36 +79,38 @@ class Login():
 			LoginStatus = "Login failure. Please try again."
 			return LoginStatus
 
+def main():
+	global LoginClass
 
-global LoginClass
+	Login.setID()
+			
+	response = str(input("Welcome to the Sylver website, where our mission is to bring you content you will love and be able to connect with friends and family while watching!\nDo you have an account with us?"))
+	if response == "yes":
+		print("Please log in.")
+		username = str(input())
+		password = str(input())
 
-Login.setID()
-		
-response = str(input("Welcome to the Sylver website, where our mission is to bring you content you will love and be able to connect with friends and family while watching!\nDo you have an account with us?"))
-if response == "yes":
-	print("Please log in.")
-	username = str(input())
-	password = str(input())
+		LoginClass = Login.VerifyLogin(username)
 
-	LoginClass = Login.VerifyLogin(username)
+		#Login.getLoginStatus()
 
-	#Login.getLoginStatus()
+		if LoginClass == "Login successful!":
+			print("You have successfully logged in! Welcome back, " + username + "!")
+		elif LoginClass == "Login failure. Please try again.":
+			print("Login failed. Please try again.")
 
-	if LoginClass == "Login successful!":
-		print("You have successfully logged in! Welcome back, " + username + "!")
-	elif LoginClass == "Login failure. Please try again.":
-		print("Login failed. Please try again.")
+	elif response == "no":
+		print("Please enter a username and a password.")
+		username = str(input())
+		password = str(input())
 
-elif response == "no":
-	print("Please enter a username and a password.")
-	username = str(input())
-	password = str(input())
+		LoginClass = Login.VerifyUsername(username)
 
-	LoginClass = Login.VerifyUsername(username)
+		if Login.VerifyUsername(username) == "This username is unique. You're good to go!":
+			print("Congratulations! Your new account has been successfully created. Your unique id for this account is " + str(Login.setID()) + ".\nPlease keep this id in a safe place in case you need to recover your account.")
+			UserList.update({username: password})
+			idList.update({username: Login.setID()})
+		elif Login.VerifyUsername(username) == "This username already exists. Please enter a new username.":
+			print("Please try again.")
 
-	if Login.VerifyUsername(username) == "This username is unique. You're good to go!":
-		print("Congratulations! Your new account has been successfully created. Your unique id for this account is " + str(Login.setID()) + ".\nPlease keep this id in a safe place in case you need to recover your account.")
-		UserList.update({username: password})
-		idList.update({username: Login.setID()})
-	elif Login.VerifyUsername(username) == "This username already exists. Please enter a new username.":
-		print("Please try again.")
+main()
